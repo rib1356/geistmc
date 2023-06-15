@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: 'geistmc'
-  }
+    publicPath: process.env.NODE_ENV === "production" ? "/geistmc/" : "/",
+  };
