@@ -51,5 +51,9 @@
     a {
         color: white;
     }
+
+    a:hover {
+        color: #F2F2F2;
+    }
 </style>
   
