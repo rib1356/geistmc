@@ -3,5 +3,10 @@
 </script>
 
 <template>
-  <HomePageImage/>
+	<HomePageImage/>
+	<p>Some content will go down here</p>
 </template>
+
+<style scoped>
+
+</style>
