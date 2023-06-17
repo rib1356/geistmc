@@ -5,12 +5,8 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-    <header>
-        <Navbar></Navbar>
-        <HomeView/>
-    </header>
-
-
+  <Navbar></Navbar>
+  <HomeView/>
     <!-- <RouterView /> -->
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -23,6 +19,10 @@ import Navbar from './components/Navbar.vue'
         </nav>
     </div> -->
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 

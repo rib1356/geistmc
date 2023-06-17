@@ -1,9 +1,19 @@
 @import './base.css';
 
-/* Main website font */
+/* Main website fonts */
 @font-face {
   font-family: Montserrat;
   src: url('/src/assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat-bold;
+  src: url('/src/assets/fonts/Montserrat/static/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: Montserrat-thin;
+  src: url('/src/assets/fonts/Montserrat/static/Montserrat-Thin.ttf');
 }
 
 html, body {

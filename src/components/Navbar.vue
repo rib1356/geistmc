@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': !showNavbar }">
         <div class="container-fluid">
             <p class="navbar-left">Est 2011, Mayfair | Global Art Sales Online</p>
             <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo">
@@ -27,6 +27,37 @@
     </nav>
 </template>
 
+<script>
+export default {
+    mounted () {
+        window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy () {
+        window.removeEventListener('scroll', this.onScroll)
+    },
+    data () {
+        return {
+        showNavbar: true,
+        lastScrollPosition: 0
+        }
+    },
+    methods: {
+        onScroll () {
+            // Get the current scroll position
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+            // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+            if (currentScrollPosition < 0) {
+                return
+            }
+            //Display navbar after scrolling certain amount
+            //TODO: this should only be the case on the home page
+            this.showNavbar = currentScrollPosition < 30
+        }
+    }
+}
+
+</script>
+
 <style scoped>
     .geist-logo {
         width: 15%;
@@ -37,6 +68,10 @@
         padding: 2%;
         display: flex;
         justify-content: space-between;
+        transition: 0.3s all ease-out;
+    }
+    .navbar.navbar-dark {
+        background-color: black;
     }
 
     .navbar-left {
@@ -48,12 +83,18 @@
         flex-grow: 0;
     }
 
-    a {
+    .nav-link {
         color: white;
+        font-family: 'Montserrat-Bold', sans-serif;
     }
 
-    a:hover {
+    .nav-link:hover {
         color: #F2F2F2;
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 </style>
   
