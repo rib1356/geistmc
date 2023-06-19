@@ -27,6 +27,10 @@ export default {
             default: false
         }
     },
+    mounted () {
+		console.log("footer mounted");
+        console.log(this.bottomFooter);
+    },
 }
 
 </script>

@@ -36,6 +36,9 @@ export default {
             default: false
         }
     },
+    mounted () {
+		console.log("navbar mounted");
+    },
 }
 
 </script>
