@@ -6,7 +6,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-	<Navbar v-bind:darkNavbar=this.darkNav></Navbar>
+	<Navbar></Navbar>
 	<HomeView></HomeView>
 	<HomePageFooter v-bind:bottomFooter=this.bottomFooter></HomePageFooter>
 		<!-- <RouterView /> -->
