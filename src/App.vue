@@ -2,25 +2,55 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HomeView from './views/HomeView.vue'
 import Navbar from './components/Navbar.vue'
+import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-  <Navbar></Navbar>
-  <HomeView/>
-    <!-- <RouterView /> -->
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+	<Navbar v-bind:darkNavbar=this.darkNavbar></Navbar>
+	<HomeView></HomeView>
+	<HomePageFooter v-bind:bottomFooter=this.bottomFooter></HomePageFooter>
+		<!-- <RouterView /> -->
+		<!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-        
-        <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        </nav>
-    </div> -->
+		<div class="wrapper">
+			<HelloWorld msg="You did it!" />
+			
+			<nav>
+			<RouterLink to="/">Home</RouterLink>
+			<RouterLink to="/about">About</RouterLink>
+			</nav>
+		</div> -->
 </template>
 
 <script>
+export default {
+    mounted () {
+        window.addEventListener('scroll', this.onScroll)
+    },
+    beforeDestroy () {
+        window.removeEventListener('scroll', this.onScroll)
+    },
+    data () {
+        return {
+			darkNavbar: false,
+			bottomFooter: false
+        }
+    },
+    methods: {
+        onScroll () {
+			//TODO: check if we are on the home page because we only need to change the navbar and footer on that scroll
+            // Get the current scroll position
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+            if (currentScrollPosition < 0) {
+                return;
+            }
+            //Change the navbars css to display differently after scrolling certain amount
+            this.darkNavbar = currentScrollPosition > 30;
+			this.bottomFooter = currentScrollPosition > 30;
+        }
+    }
+}
 
 </script>
 

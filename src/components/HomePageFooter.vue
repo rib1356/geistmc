@@ -1,27 +1,51 @@
 <template>
-    <div class="footer-div">
+    <div :class="bottomFooter ? 'page-footer-div' : 'image-footer-div'">
         <div class="footer-navigation footer-navigation-left">
-            <p class="footer-text">Geist Holdings Ltd</p>
+            <p class="footer-text" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Geist Holdings Ltd</p>
         </div>
         <div class="footer-navigation footer-navigation-center">
-            <a class="footer-text" href="#">Subscribe</a>
-            <p class="footer-text">|</p>
-            <a class="footer-text" href="#">Terms & Conditions</a>
-            <p class="footer-text">|</p>
-            <a class="footer-text" href="#">Privacy Policy</a>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Subscribe</a>
+            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">|</p>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Terms & Conditions</a>
+            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">|</p>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Privacy Policy</a>
         </div>
         <div class="footer-navigation footer-navigation-right">
-            <a class="footer-text" href="#">Instagram</a>
-            <a class="footer-text" href="#">Artsy</a>
-            <a class="footer-text" href="#">Artnet</a>
+            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Instagram</a>
+            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artsy</a>
+            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artnet</a>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+    name: 'HomePageFooter',
+    props: {
+        bottomFooter: {
+            type: Boolean,
+            default: false
+        }
+    },
+}
+
+</script>
+
 <style scoped>
-    .footer-div {
+    .image-footer-div {
         width: 100vw;
         position: absolute;
+        z-index: -1;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .page-footer-div {
+        background-color: transparent;
+        width: 100vw;
         z-index: -1;
         bottom: 0;
         display: flex;

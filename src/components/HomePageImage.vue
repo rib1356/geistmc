@@ -5,9 +5,14 @@
 <template>
 	<div class="home-page-div">
 		<div class="main-image"></div>
-		<HomePageFooter/>
 	</div>
 </template>
+
+<script>
+export default {
+  name: 'HomePageImage',
+}
+</script>
   
 <style scoped>
   	.main-image {

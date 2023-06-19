@@ -1,7 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': !showNavbar }">
+    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar }">
         <div class="container-fluid">
-            <p class="navbar-left">Est 2011, Mayfair | Global Art Sales Online</p>
+            <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
             <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo">
             <!-- Mobile button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,31 +29,13 @@
 
 <script>
 export default {
-    mounted () {
-        window.addEventListener('scroll', this.onScroll)
-    },
-    beforeDestroy () {
-        window.removeEventListener('scroll', this.onScroll)
-    },
-    data () {
-        return {
-        showNavbar: true,
-        lastScrollPosition: 0
+    name: 'Navbar',
+    props: {
+        darkNavbar: {
+            type: Boolean,
+            default: false
         }
     },
-    methods: {
-        onScroll () {
-            // Get the current scroll position
-            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-            // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
-            if (currentScrollPosition < 0) {
-                return
-            }
-            //Display navbar after scrolling certain amount
-            //TODO: this should only be the case on the home page
-            this.showNavbar = currentScrollPosition < 30
-        }
-    }
 }
 
 </script>
@@ -77,6 +59,7 @@ export default {
     .navbar-left {
         color: white;
         font-size: 14px;
+        font-family: 'Montserrat-Bold', sans-serif;
     }
 
     .navbar-collapse {
