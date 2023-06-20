@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar }">
+    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar2 }">
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
             <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo">
@@ -31,7 +31,7 @@
 export default {
     name: 'Navbar',
     props: {
-        darkNavbar: {
+        darkNavbar2: {
             type: Boolean,
             default: false
         }
