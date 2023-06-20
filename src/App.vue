@@ -26,6 +26,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 export default {
     mounted () {
 		console.log("app mounted");
+		console.log(this.darkNavbar);
         window.addEventListener('scroll', this.onScroll)
     },
     beforeDestroy () {
@@ -47,7 +48,7 @@ export default {
                 return;
             }
             //Change the navbars css to display differently after scrolling certain amount
-            // this.darkNavbar = currentScrollPosition > 30;
+            this.darkNavbar = currentScrollPosition > 30;
 			this.bottomFooter = currentScrollPosition > 30;
         }
     }
