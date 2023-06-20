@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Artists</a>
+                        <a class="nav-link" href="#">Artists</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -44,10 +44,11 @@ export default {
     .geist-logo {
         width: 15%;
         margin:auto;
+        margin-left: 22%;
     }
 
     .navbar {
-        padding: 2%;
+        padding: 1rem;
         display: flex;
         justify-content: space-between;
         transition: 0.3s all ease-out;
@@ -56,10 +57,15 @@ export default {
         background-color: black;
     }
 
+    .container-fluid {
+        padding: 0;
+    }
+
     .navbar-left {
         color: white;
         font-size: 14px;
         font-family: 'Montserrat-Bold', sans-serif;
+        margin-left: 0rem;
     }
 
     .navbar-collapse {
@@ -69,6 +75,9 @@ export default {
     .nav-link {
         color: white;
         font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 14px;
+        padding-right: 0 !important;
+        padding-left: 1rem !important;
     }
 
     .nav-link:hover {

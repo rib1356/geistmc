@@ -1,7 +1,7 @@
 <template>
     <div :class="bottomFooter ? 'page-footer-div' : 'image-footer-div'">
         <div class="footer-navigation footer-navigation-left">
-            <p class="footer-text" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Geist Holdings Ltd</p>
+            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">© Geist Holdings Ltd</p>
         </div>
         <div class="footer-navigation footer-navigation-center">
             <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Subscribe</a>
@@ -11,9 +11,9 @@
             <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Privacy Policy</a>
         </div>
         <div class="footer-navigation footer-navigation-right">
-            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Instagram</a>
-            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artsy</a>
-            <a class="footer-text" href="#" style="font-family: 'Montserrat-Bold';" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artnet</a>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Instagram</a>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artsy</a>
+            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artnet</a>
         </div>
     </div>
 </template>
@@ -28,8 +28,6 @@ export default {
         }
     },
     mounted () {
-		console.log("footer mounted");
-        console.log(this.bottomFooter);
     },
 }
 
@@ -67,15 +65,15 @@ export default {
         text-transform: uppercase;
     }
 
-    .footer-navigation-left {
-        margin-left: 1rem;
-    }
+    /* .footer-navigation-left {
+        
+    } */
+    
     .footer-navigation-center {
         width: 33%;
         margin-left: 4rem;
     }
     .footer-navigation-right {
-        margin-right: 2rem;
         width: 18%;
     }
 

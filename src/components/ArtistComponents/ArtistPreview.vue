@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="artist-name">David Hockney</h1>
+        <h2 class="artist-name">David Hockney</h2>
         <div class="artist-image"></div>
         <p class="image-subtext">The Most Important Living Artist</p>
         <p class="artist-text">Born 1937 in Bradford, British artist David Hockney has dominated the international art
@@ -19,10 +19,10 @@
     }
 
     .artist-image {
-		background-image: url('../../assets/images/changeme.jpeg');
+		background-image: url('../../assets/images/artists/davidHockney/dh-preview.jpg');
 		background-size: cover;
-		height: 50vh;
-		width: 50vw;
+		height: 80vh;
+		width: auto;
 		background-position: center;
   	}
 
