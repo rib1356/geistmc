@@ -8,7 +8,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 <template>
 	<Navbar></Navbar>
 	<HomeView></HomeView>
-	<HomePageFooter v-bind:bottom-footer="true"></HomePageFooter>
+	<HomePageFooter v-bind:bottom-footer-2="true"></HomePageFooter>
 		<!-- <RouterView /> -->
 		<!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
