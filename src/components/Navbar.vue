@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar2 }">
+    <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar }">
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
             <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo">
@@ -31,13 +31,10 @@
 export default {
     name: 'Navbar',
     props: {
-        darkNavbar2: {
+        darkNavbar: {
             type: Boolean,
             default: false
         }
-    },
-    mounted () {
-		console.log("navbar mounted");
     },
 }
 

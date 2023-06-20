@@ -6,7 +6,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-	<Navbar v-bind:darkNavbar2="darkNavbar"></Navbar>
+	<Navbar v-bind:darkNavbar="darkNavbar"></Navbar>
 	<HomeView></HomeView>
 	<HomePageFooter v-bind:bottomFooter="bottomFooter"></HomePageFooter>
 		<!-- <RouterView /> -->
@@ -25,8 +25,6 @@ import HomePageFooter from './components/HomePageFooter.vue'
 <script>
 export default {
     mounted () {
-		console.log("app mounted");
-
         window.addEventListener('scroll', this.onScroll)
     },
     beforeDestroy () {
@@ -50,8 +48,6 @@ export default {
             //Change the navbars css to display differently after scrolling certain amount
             this.darkNavbar = currentScrollPosition > 30;
 			this.bottomFooter = currentScrollPosition > 30;
-
-			console.log(this.darkNavbar);
         }
     }
 }
