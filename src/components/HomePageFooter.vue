@@ -42,7 +42,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 0rem 3rem 1rem 3rem;;
     }
 
     .page-footer-div {
@@ -68,13 +68,13 @@ export default {
     /* .footer-navigation-left {
         
     } */
-    
+
     .footer-navigation-center {
-        width: 33%;
+        width: 25rem;
         margin-left: 4rem;
     }
     .footer-navigation-right {
-        width: 18%;
+        width: 13rem;
     }
 
     .footer-navigation {

@@ -2,7 +2,9 @@
     <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar }">
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
-            <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo">
+            <div class="geist-logo-div">
+                <img src="../../src/assets/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo" id="giest-logo">
+            </div>
             <!-- Mobile button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,14 +43,19 @@ export default {
 </script>
 
 <style scoped>
+
+    .geist-logo-div {
+        position: absolute;
+        left: 50%;
+        margin-left: -90px !important; /* 50% of  logo width */
+        display: block;
+    }
     .geist-logo {
-        width: 15%;
-        margin:auto;
-        margin-left: 22%;
+        width: 180px;
     }
 
     .navbar {
-        padding: 1rem;
+        padding: 1rem 3rem 1rem 3rem;;
         display: flex;
         justify-content: space-between;
         transition: 0.3s all ease-out;
