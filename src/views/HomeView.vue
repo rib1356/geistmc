@@ -1,13 +1,12 @@
 <script setup>
   import HomePageImage from '../components/HomePageImage.vue';
-  import ArtistPreview from '../components/ArtistComponents/ArtistPreview.vue';
+  import ArtistPreview from '../components/artistComponents/ArtistPreview.vue';
 </script>
 
 <template>
 	<HomePageImage/>
 	<div class="page-padding">
 		<ArtistPreview/>
-		<hr>
 	</div>
 </template>
 

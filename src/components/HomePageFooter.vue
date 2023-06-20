@@ -1,19 +1,19 @@
 <template>
-    <div :class="bottomFooter ? 'page-footer-div' : 'image-footer-div'">
+    <div :class="bottomFooterMove ? 'page-footer-div' : 'image-footer-div'">
         <div class="footer-navigation footer-navigation-left">
-            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">© Geist Holdings Ltd</p>
+            <p :class="footerClass()">© Geist Holdings Ltd</p>
         </div>
         <div class="footer-navigation footer-navigation-center">
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Subscribe</a>
-            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">|</p>
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Terms & Conditions</a>
-            <p class="footer-text" :style="bottomFooter ? 'color:black;' : 'color:white;'">|</p>
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Privacy Policy</a>
+            <a :class="footerClass()">Subscribe</a>
+            <p :class="footerClass()">|</p>
+            <a :class="footerClass()">Terms & Conditions</a>
+            <p :class="footerClass()">|</p>
+            <a :class="footerClass()">Privacy Policy</a>
         </div>
         <div class="footer-navigation footer-navigation-right">
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Instagram</a>
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artsy</a>
-            <a class="footer-text" href="#" :style="bottomFooter ? 'color:black;' : 'color:white;'">Artnet</a>
+            <a :class="footerClass()">Instagram</a>
+            <a :class="footerClass()">Artsy</a>
+            <a :class="footerClass()">Artnet</a>
         </div>
     </div>
 </template>
@@ -22,13 +22,28 @@
 export default {
     name: 'HomePageFooter',
     props: {
-        bottomFooter: {
+        bottomFooterAnimation: {
+            type: Boolean,
+            default: false
+        },
+        bottomFooterMove: {
             type: Boolean,
             default: false
         }
     },
     mounted () {
     },
+    methods:{
+        footerClass(){ //Transition the text first after initial scroll then move the footer to the bottom of the page
+            if (this.bottomFooterAnimation && !this.bottomFooterMove) {
+                return 'footer-text fade-text-out'
+            } else if (!this.bottomFooterAnimation && this.bottomFooterMove) {
+                return 'footer-text bottom-footer-text'
+            } else {
+                return 'footer-text fade-text-in'
+            }
+        }
+}
 }
 
 </script>
@@ -42,7 +57,7 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 0rem 3rem 1rem 3rem;;
+        padding: 0rem 3rem 1rem 3rem;
     }
 
     .page-footer-div {
@@ -53,16 +68,29 @@ export default {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 1rem;
+        padding: 0rem 3rem 1rem 3rem;
     }
 
     .footer-text {
-        color: white;
         font-size: 14px;
         text-align: center;
         font-weight: 500;
         text-decoration: none;
         text-transform: uppercase;
+    }
+
+    .fade-text-in {
+        color: white;
+        transition: 0.3s all ease-out;
+    }
+
+    .fade-text-out {
+        color: transparent;
+        transition: 0.3s all ease-out;
+    }
+
+    .bottom-footer-text {
+        color: black;
     }
 
     /* .footer-navigation-left {

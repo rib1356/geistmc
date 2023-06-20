@@ -8,7 +8,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 <template>
 	<Navbar v-bind:darkNavbar="darkNavbar"></Navbar>
 	<HomeView></HomeView>
-	<HomePageFooter v-bind:bottomFooter="bottomFooter"></HomePageFooter>
+	<HomePageFooter v-bind:bottomFooterAnimation="bottomFooterAnimation" v-bind:bottomFooterMove="bottomFooterMove"></HomePageFooter>
 		<!-- <RouterView /> -->
 		<!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -33,7 +33,8 @@ export default {
     data () {
         return {
 			darkNavbar: false,
-			bottomFooter: false
+			bottomFooter: false,
+			bottomFooterMove: false,
         }
     },
     methods: {
@@ -47,7 +48,8 @@ export default {
             }
             //Change the navbars css to display differently after scrolling certain amount
             this.darkNavbar = currentScrollPosition > 1;
-			this.bottomFooter = currentScrollPosition > 1;
+			this.bottomFooterAnimation = currentScrollPosition > 1 && currentScrollPosition < 250;
+			this.bottomFooterMove = currentScrollPosition > 250;
         }
     }
 }
