@@ -18,12 +18,13 @@
 <style>
     .artist-name {
         text-transform: uppercase;
+        margin-bottom: 1.5rem;
     }
 
     .artist-image {
 		object-fit: cover;
 		height: 70vh;
-		width: 80vw;
+		width: 70vw;
 		background-position: center;
   	}
 
@@ -31,7 +32,7 @@
         font-size: 18px;
         font-family: 'Montserrat-Bold', sans-serif;
         margin-bottom: 0;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 
     .artist-text {

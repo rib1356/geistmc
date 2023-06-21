@@ -13,6 +13,6 @@
 
 <style scoped>
 	.page-padding {
-		padding: 10% 10% 5% 10%;
+		padding: 9% 15% 5% 15%;
 	}
 </style>
