@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
             <div class="geist-logo-div">
-                <img src="/images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo" id="giest-logo">
+                <img src="images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo" id="giest-logo">
             </div>
             <!-- Mobile button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
