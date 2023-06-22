@@ -16,7 +16,7 @@ export default {
   
 <style scoped>
   	.main-image {
-		background-image: url('../assets/images/homePageChargingBull.jpg');
+		background-image: url('/images/homePageChargingBull.jpg');
 		background-size: cover;
 		height: 100vh;
 		width: 100vw;
