@@ -2,7 +2,7 @@
     <div class="artist-preview-div">
         <h2 class="artist-name">{{this.artistInformation.artistName}}</h2>
         <div>
-            <img :src="(`../src/assets/images/artists/${this.artistInformation.artistNamePath}/${this.artistInformation.artistImageFileName}`)" :alt="this.artistInformation.artistImageAlt" class="artist-image"/>
+            <img :src="(`./src/assets/images/artists/${this.artistInformation.artistNamePath}/${this.artistInformation.artistImageFileName}`)" :alt="this.artistInformation.artistImageAlt" class="artist-image"/>
         </div>
         <p class="image-subtext">{{this.artistInformation.imageSubtext }}</p>
         <p class="artist-text">{{ this.artistInformation.artistText }}</p>
