@@ -1,6 +1,6 @@
 <template>
     <div style="position: relative;">
-        <img :src="(`images/artists/${this.artworkSeriesInformation.artistNamePath}/${this.artworkSeriesInformation.seriesImageFileName}`)" :alt="this.artworkSeriesInformation.seriesImageAlt" class="artwork-series-image"/>
+        <img :src="(`${this.baseURL}images/artists/${this.artworkSeriesInformation.artistNamePath}/${this.artworkSeriesInformation.seriesImageFileName}`)" :alt="this.artworkSeriesInformation.seriesImageAlt" class="artwork-series-image"/>
         <p class="artwork-series-name" >{{this.artworkSeriesInformation.seriesName }}</p>
         <p class="artwork-series-text">{{this.artworkSeriesInformation.seriesText }}</p>
         <a class="view-artwork-series" :class="{ 'view-series-offset': this.artworkSeriesInformation.seriesImageFileName == 'dhSpringSeries.jpg' }">View Series</a>
@@ -14,6 +14,11 @@ export default {
         artworkSeriesInformation: {
             type: Object
         },
+    },
+    data () {
+        return {
+			baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
+        }
     },
     mounted () {
     },

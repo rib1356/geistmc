@@ -2,7 +2,7 @@
     <div class="artist-preview-div">
         <h2 class="artist-name">{{this.artistInformation.artistName}}</h2>
         <div>
-            <img :src="(`images/artists/${this.artistInformation.artistNamePath}/${this.artistInformation.artistImageFileName}`)" :alt="this.artistInformation.artistImageAlt" class="artist-image"/>
+            <img :src="(`${this.baseURL}images/artists/${this.artistInformation.artistNamePath}/${this.artistInformation.artistImageFileName}`)" :alt="this.artistInformation.artistImageAlt" class="artist-image"/>
         </div>
         <p class="image-subtext">{{this.artistInformation.imageSubtext }}</p>
         <p class="artist-text">{{ this.artistInformation.artistText }}</p>
@@ -16,6 +16,11 @@ export default {
         artistInformation: {
             type: Object
         },
+    },
+    data () {
+        return {
+			baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
+        }
     },
     mounted () {
     },

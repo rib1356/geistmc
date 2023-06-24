@@ -2,6 +2,7 @@
   import HomePageImage from '../components/HomePageImage.vue';
   import ArtistPreviewComponent from '../components/artistComponents/ArtistPreviewComponent.vue';
   import ArtworkSeriesComponent from '../components/artworkComponents/ArtworkSeriesComponent.vue';
+  import ArtworkCarouselComponent from '../components/artworkComponents/ArtworkCarouselComponent.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series1"/>
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series2"/>
 		</div>
+		<ArtworkCarouselComponent />
 		<ArtistPreviewComponent :artistInformation="arturoDiModicaObject"/>
 	</div>
 </template>

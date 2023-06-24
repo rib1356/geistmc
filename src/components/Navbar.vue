@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
             <div class="geist-logo-div">
-                <img src="images/geistLogoWhite.png" alt="geist-logo-white" class="geist-logo" id="giest-logo">
+                <img :src="(`${this.baseURL}images/geistLogoWhite.png`)" alt="geist-logo-white" class="geist-logo" id="giest-logo">
             </div>
             <!-- Mobile button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,6 +36,11 @@ export default {
         darkNavbar: {
             type: Boolean,
             default: false
+        }
+    },
+    data () {
+        return {
+			baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
         }
     },
 }
