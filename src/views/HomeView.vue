@@ -13,13 +13,22 @@
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series1"/>
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series2"/>
 		</div>
-		<ArtworkCarouselComponent />
+		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.francisBacon"/>
+		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.andyWarhol"/>
 		<ArtistPreviewComponent :artistInformation="arturoDiModicaObject"/>
+		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.arturoDiModica"/>
 	</div>
 </template>
 
 <script>
 export default {
+	name: 'HomeView',
+	components: { 
+		HomePageImage, 
+		ArtistPreviewComponent,
+		ArtworkSeriesComponent,
+		ArtworkCarouselComponent
+	},
     data () {
         return {
 			davidHockneyObject: {
@@ -52,6 +61,40 @@ export default {
 					seriesImageFileName: "dhYosemiteSeries.jpg",
 					seriesImageAlt: "david-hockney-yosemite-series",
 					seriesText: "Created during two trips to the Yosemite Valley, the series was Hockney’s first digital editions to achieve major commercial success. The works marked a big step forward in terms of complexity of the artists exploration with the new iPad medium.",
+				},
+			},
+			artworkCarouselObject: {
+				francisBacon: {
+					artistName: "Francis Bacon",
+					artistFolder: "francisBacon",
+					carouselImages: [
+						"fbCarousel1.jpg",
+						"fbCarousel2.jpg",
+						"fbCarousel3.jpg",
+						"fbCarousel4.jpg",
+						"fbCarousel5.jpg",
+					]
+				},
+				andyWarhol: {
+					artistName: "Andy Warhol",
+					artistFolder: "andyWarhol",
+					carouselImages: [
+						"awCarousel1.jpg",
+						"awCarousel2.jpg",
+						"awCarousel3.jpg",
+						"awCarousel4.jpg",
+						"awCarousel5.jpg",
+					]
+				},
+				arturoDiModica: {
+					artistName: "", //Needs to be empty on the home page
+					artistFolder: "arturoDiModica",
+					carouselImages: [
+						"admCarousel1.jpg",
+						"admCarousel2.jpg",
+						"admCarousel3.jpg",
+						"admCarousel4.jpg",
+					]
 				},
 			}
         }
