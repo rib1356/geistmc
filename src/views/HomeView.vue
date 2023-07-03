@@ -13,10 +13,10 @@
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series1"/>
 			<ArtworkSeriesComponent :artworkSeriesInformation="artworkSeriesObject.series2"/>
 		</div>
-		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.francisBacon"/>
-		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.andyWarhol"/>
+		<!-- <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.francisBacon"/> -->
+		<!-- <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.andyWarhol"/> -->
 		<ArtistPreviewComponent :artistInformation="arturoDiModicaObject"/>
-		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.arturoDiModica"/>
+		<!-- <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.arturoDiModica"/> -->
 	</div>
 </template>
 

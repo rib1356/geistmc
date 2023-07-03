@@ -11,9 +11,9 @@
             <a :class="footerClass()">Privacy Policy</a>
         </div>
         <div class="footer-navigation footer-navigation-right">
-            <a :class="footerClass()">Instagram</a>
-            <a :class="footerClass()">Artsy</a>
-            <a :class="footerClass()">Artnet</a>
+            <a href="https://www.instagram.com/Geist.uk/?hl=en" target="_blank" :class="footerClass()">Instagram</a>
+            <a href="https://www.artsy.net/partner/geist/works" target="_blank" :class="footerClass()">Artsy</a>
+            <a href="https://www.artnet.com/galleries/geist-galleries/artworks/" target="_blank" :class="footerClass()">Artnet</a>
         </div>
     </div>
 </template>
@@ -52,7 +52,7 @@ export default {
     .image-footer-div {
         width: 100vw;
         position: absolute;
-        z-index: -1;
+        z-index: 10;
         bottom: 0;
         display: flex;
         flex-direction: row;
@@ -113,6 +113,12 @@ export default {
 
     a:hover {
         color: #e6e6e6;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .bottom-footer-text:hover {
+        color: black;
         text-decoration: underline;
         cursor: pointer;
     }

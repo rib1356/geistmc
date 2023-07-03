@@ -12,9 +12,20 @@
             :dragging-distance="50"
             :infinite="true"
             :arrows="false"
+            :bullets="false"
             v-if="this.imagesLoaded"
             >
-            <vueper-slide v-for="(slide, i) in slides" :key="i" :image="slide.image"/>
+            <vueper-slide 
+                v-for="(slide, i) in slides" 
+                :key="i" 
+                :image="slide.image"
+                title="12312">
+                <template #content>
+                    <div class="vueperslide__content-wrapper">
+                        <span>Hello1</span>
+                    </div>
+                </template>
+            </vueper-slide>
         </vueper-slides>
     </div>
 </template>
@@ -68,6 +79,10 @@
 		background-position: center;
   	}
 
-      .vueperslides--fixed-height { height: 50vh; }
+    .vueperslides--fixed-height { height: 50vh; }
+
+    .vueperslide__content-wrapper {
+        font-size: 40px;
+    }
 </style>
   
