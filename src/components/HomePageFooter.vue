@@ -1,7 +1,7 @@
 <template>
     <div :class="bottomFooterMove ? 'page-footer-div' : 'image-footer-div'">
         <div class="footer-navigation footer-navigation-left">
-            <p :class="footerClass()">© Geist Holdings Ltd</p>
+            <p :class="footerClass()" @click="scrollToTop()">© Geist Holdings Ltd</p>
         </div>
         <div class="footer-navigation footer-navigation-center">
             <a :class="footerClass()">Subscribe</a>
@@ -42,6 +42,12 @@ export default {
             } else {
                 return 'footer-text fade-text-in'
             }
+        },
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
         }
 }
 }

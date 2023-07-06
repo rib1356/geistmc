@@ -9,6 +9,15 @@ import router from './router'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
+// import Swiper bundle with all modules installed
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
+// init Swiper:
+const swiper = new Swiper();
+
 const app = createApp(App)
 
 app.use(createPinia())

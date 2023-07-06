@@ -48,8 +48,8 @@ export default {
             }
             //Change the navbars css to display differently after scrolling certain amount
             this.darkNavbar = currentScrollPosition > 1;
-			this.bottomFooterAnimation = currentScrollPosition > 1 && currentScrollPosition < 250;
-			this.bottomFooterMove = currentScrollPosition > 250;
+            this.bottomFooterAnimation = currentScrollPosition > 1 && currentScrollPosition < 50;
+            this.bottomFooterMove = currentScrollPosition > 50;
         }
     }
 }

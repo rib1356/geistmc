@@ -1,63 +1,70 @@
 <template>
     <div class="artwork-carousel-div">
-        <h2 class="carousel-name">{{  this.artworkCarousel.artistName }}</h2>
-        <vueper-slides
-            class="no-shadow"
-            autoplay
-            :duration="2500"
-            :fixedHeight="true"
-            :visible-slides="3"
-            :slide-ratio="1 / 4"
-            :gap="3"
-            :dragging-distance="50"
-            :infinite="true"
-            :arrows="false"
-            :bullets="false"
-            v-if="this.imagesLoaded"
-            >
-            <vueper-slide 
-                v-for="(slide, i) in slides" 
-                :key="i" 
-                :image="slide.image"
-                title="12312">
-                <template #content>
-                    <div class="vueperslide__content-wrapper">
-                        <span>Hello1</span>
-                    </div>
-                </template>
-            </vueper-slide>
-        </vueper-slides>
+        <swiper     
+        :modules="modules"
+        :slides-per-view="auto"
+        :space-between="30"
+        :slides-offset-after="0"
+        :free-mode="true"
+        navigation
+        :scrollbar="{ draggable: true }">
+            <swiper-slide>
+                <img class="swiper-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[0]}`)">
+            </swiper-slide>
+            <swiper-slide>
+                    <img class="swiper-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[1]}`)">
+            </swiper-slide>
+            <swiper-slide>
+                    <img class="swiper-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[2]}`)">
+            </swiper-slide>
+            <swiper-slide>
+                    <img class="swiper-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[3]}`)">
+            </swiper-slide>
+            <swiper-slide>
+                    <img class="swiper-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[4]}`)">
+            </swiper-slide>
+        </swiper>
     </div>
 </template>
 <script>
-    import { VueperSlides, VueperSlide } from 'vueperslides'
-    import 'vueperslides/dist/vueperslides.css'
-    export default {
-        name: 'ArtworkCarouselComponent',
-        components: { 
-            VueperSlides, 
-            VueperSlide 
-        },
-        props: {
-            artworkCarousel: {
-                type: Object
-            },
-        },
-        data () {
-            return {
-                baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
-                slides: [],
-                imagesLoaded: false
-            }
-        },
-        mounted () {
-            this.artworkCarousel.carouselImages.forEach(carouselImg => {
-                this.slides.push({ image: `${import.meta.env.PROD === true ? '' : '/'}images/artists/${this.artworkCarousel.artistFolder}/${carouselImg}` })
-            });
-            this.imagesLoaded = true;
-        },
-    }
+  // import Swiper core and required modules
+  import { Navigation, Pagination, Scrollbar, A11y, FreeMode } from 'swiper/modules';
 
+  // Import Swiper Vue.js components
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // Import Swiper styles
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import 'swiper/css/scrollbar';
+export default {
+    name: 'ArtworkCarouselComponent',
+    components: {
+        Swiper,
+        SwiperSlide,
+    },
+    props: {
+        artworkCarousel: {
+            type: Object
+        },
+    },
+    data () {
+        return {
+            baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
+            slides: [],
+            imagesLoaded: false,
+        }
+    },
+    mounted () {
+        console.log(this.artworkCarousel);
+    },
+    setup() {
+        return {
+            modules: [Navigation, Pagination, Scrollbar, A11y, FreeMode],
+        };
+    },
+}
 </script>
 
 
@@ -65,24 +72,35 @@
 <style scoped>
     .artwork-carousel-div {
         margin-bottom: 3rem;
-    }
-    .carousel-name {
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
 
-    .artist-image {
-		object-fit: cover;
-		height: 70vh;
-		width: 70vw;
-		background-position: center;
-  	}
-
-    .vueperslides--fixed-height { height: 50vh; }
-
-    .vueperslide__content-wrapper {
-        font-size: 40px;
+    .swiper {
+        max-height: 300px;
+        height: 300px
     }
+
+    /* .swiper-slide {
+        max-height: auto;
+    } */
+    .swiper-slide img {
+        object-fit: contain;
+        max-height: 100%;
+        background-position: center;
+    }
+
+/* .swiper-slide {
+  width: 80%;
+}
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
+} */
+
+
 </style>
   

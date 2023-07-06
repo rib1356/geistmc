@@ -75,8 +75,7 @@ export default {
 
     .navbar-left {
         color: white;
-        font-size: 14px;
-        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 12px;
         margin-left: 0rem;
     }
 
@@ -86,8 +85,7 @@ export default {
 
     .nav-link {
         color: white;
-        font-family: 'Montserrat-Bold', sans-serif;
-        font-size: 14px;
+        font-size: 12px;
         padding-right: 0 !important;
         padding-left: 1rem !important;
     }
