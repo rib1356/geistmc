@@ -1,5 +1,14 @@
 <template>
-    <div :class="bottomFooterMove ? 'page-footer-div' : 'image-footer-div'">
+    <div v-if="!bottomFooterMove" :class="bottomFooterMove ? 'page-footer-div' : 'image-footer-div'"> <!-- Renders when entire homepage visible-->
+        <div class="home-page-footer">
+            <a href="https://www.instagram.com/Geist.uk/?hl=en" target="_blank" :class="footerClass()">Instagram</a>
+            <p :class="footerClass()">|</p>
+            <a href="https://www.artsy.net/partner/geist/works" target="_blank" :class="footerClass()">Artsy</a>
+            <p :class="footerClass()">|</p>
+            <a href="https://www.artnet.com/galleries/geist-galleries/artworks/" target="_blank" :class="footerClass()">Artnet</a>
+        </div>
+    </div>
+    <div v-else class='page-footer-div'> <!-- Renders when scrolled and visible at bottom of page-->
         <div class="footer-navigation footer-navigation-left">
             <p :class="footerClass()" @click="scrollToTop()">© Geist Holdings Ltd</p>
         </div>
@@ -62,7 +71,7 @@ export default {
         bottom: 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding: 0rem 3rem 1rem 3rem;
     }
 
@@ -78,7 +87,7 @@ export default {
     }
 
     .footer-text {
-        font-size: 14px;
+        font-size: 12px;
         text-align: center;
         font-weight: 500;
         text-decoration: none;
@@ -117,6 +126,13 @@ export default {
         justify-content: space-between;
     }
 
+    .home-page-footer {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
     a:hover {
         color: #e6e6e6;
         text-decoration: underline;
@@ -127,5 +143,9 @@ export default {
         color: black;
         text-decoration: underline;
         cursor: pointer;
+    }
+
+    p {
+        margin: 0;
     }
 </style>
