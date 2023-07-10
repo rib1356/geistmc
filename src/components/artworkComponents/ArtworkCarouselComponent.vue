@@ -16,7 +16,8 @@
             <swiper-slide v-for="(n, i) in this.artworkCarousel.carouselImages.length" :key="i" class="w-fit"> 
                 <div>
                     <img class="slide-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[i]}`)">
-                    <p>Hello</p>
+                    <p class="carousel-title">{{ this.artworkCarousel.carouselText[i].title }}</p>
+                    <p class="carousel-subtext">{{ this.artworkCarousel.carouselText[i].subText }}</p>
                 </div>
             </swiper-slide>
         <!-- </div> -->
@@ -57,6 +58,7 @@ export default {
         }
     },
     mounted () {
+        console.log(this.artworkCarousel.carouselText);
         this.slidesPerView = (this.artworkCarousel.carouselImages.length / 2) + 0.25;
     },
     setup() {
@@ -77,7 +79,7 @@ export default {
 
     .swiper {
         width: 100%;
-        height: 300px
+        height: 330px;
     }
 
     /* .swiper-slide img {
@@ -106,8 +108,8 @@ export default {
 
     .swiper-slide img {
         height: 40vh;
-        width: auto;
-        object-fit: cover;
+        width: 100%;
+        object-fit: fill;
         background-position: center;
     }
     .my-gallery figure {
@@ -125,6 +127,18 @@ export default {
         width: min-content!important; */
     }
 
+
+    .carousel-title {
+        font-family: 'Montserrat-Bold', sans-serif;
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+    }
+    .carousel-subtext {
+        font-size: 10px;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+    }
 
 </style>
   

@@ -73,6 +73,13 @@ export default {
 						"fbCarousel3.jpg",
 						"fbCarousel4.jpg",
 						"fbCarousel5.jpg",
+					],
+					carouselText: [
+						{ title: "Figure writing reflected in a mirror 1977", subText: "A male figure in white underwear resembling George Dye"},
+						{ title: "Study for a portrait of John Edwards 1986", subText: "A study of the aritsts clocest companion"},
+						{ title: "Oedipus and the Sphinx 1984", subText: "A limited edition lithograph series"},
+						{ title: "Study for a Portrait of John Edwards 1984", subText: "An important late example of the artists work"},
+						{ title: "L’Homme au Lavabo 1978", subText: "Limited edition lithograph series"},
 					]
 				},
 				andyWarhol: {
@@ -84,6 +91,13 @@ export default {
 						"awCarousel3.jpg",
 						"awCarousel4.jpg",
 						"awCarousel5.jpg",
+					],
+					carouselText: [
+						{ title: "Moonwalk 1987", subText: "From the Moonwalk diptych series"},
+						{ title: "Superman 1981", subText: "From the Myths series"},
+						{ title: "Black Marilyn 1964", subText: "Maybe the most iconic of all the screenprints"},
+						{ title: "Black Lenin 1987", subText: "Screenprint on paper"},
+						{ title: "MAO 11.96 1972", subText: "Screenprint on paper"},
 					]
 				},
 				arturoDiModica: {
@@ -94,6 +108,12 @@ export default {
 						"admCarousel2.jpg",
 						"admCarousel3.jpg",
 						"admCarousel4.jpg",
+					],
+					carouselText: [
+						{ title: "Madre de Sicilia 2000", subText: "From the return to abstraction series"},
+						{ title: "Early Abstraction 1970", subText: "Recently rediscovered early New York work"},
+						{ title: "6ft Charging Bull 1987-89", subText: "Polished bronze created from the original model"},
+						{ title: "Il Cavallo 1988", subText: "Towed on the back of the artist's Ferrari to the Lincoln Center"},
 					]
 				},
 			}
