@@ -75,7 +75,7 @@ export default {
 
     .navbar-left {
         color: white;
-        font-size: 12px;
+        font-size: 13px;
         margin-left: 0rem;
     }
 
@@ -85,7 +85,7 @@ export default {
 
     .nav-link {
         color: white;
-        font-size: 12px;
+        font-size: 13px;
         padding-right: 0 !important;
         padding-left: 1rem !important;
     }

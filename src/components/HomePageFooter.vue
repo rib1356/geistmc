@@ -1,6 +1,8 @@
 <template>
     <div v-if="!bottomFooterMove" :class="bottomFooterMove ? 'page-footer-div' : 'image-footer-div'"> <!-- Renders when entire homepage visible-->
         <div class="home-page-footer">
+            <p :class="footerClass()">Find us</p>
+            <i :class="footerClass()" class="bi bi-arrow-right" ></i>
             <a href="https://www.instagram.com/Geist.uk/?hl=en" target="_blank" :class="footerClass()">Instagram</a>
             <p :class="footerClass()">|</p>
             <a href="https://www.artsy.net/partner/geist/works" target="_blank" :class="footerClass()">Artsy</a>
@@ -87,7 +89,7 @@ export default {
     }
 
     .footer-text {
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
         font-weight: 500;
         text-decoration: none;
@@ -127,7 +129,7 @@ export default {
     }
 
     .home-page-footer {
-        width: 20%;
+        width: 25%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
