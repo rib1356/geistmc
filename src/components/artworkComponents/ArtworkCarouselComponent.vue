@@ -4,14 +4,24 @@
         <swiper     
         class="swiper-container my-gallery"
         :modules="modules"
-        :slides-per-view="auto"
+        :slides-per-view="3.5"
         :space-between="20"
         :free-mode="true"
-        :slides-offset-after="0"
-        :observe-parents="true"
-        :observer="true"
-        navigation
-        :scrollbar="{ draggable: true }">
+        :slides-offset-after="75"
+        :keyboard="{
+            enabled: true,
+        }"
+        :mousewheel="{
+            enabled: true,
+            forceToAxis: true,
+            sensitivity: 0.75,
+        }"
+        :navigation="{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }"
+        :scrollbar="{ draggable: true }"
+        id="artworkSlider">
         <!-- <div class="swiper-wrapper"> -->
             <swiper-slide v-for="(n, i) in this.artworkCarousel.carouselImages.length" :key="i" class="w-fit"> 
                 <div>
@@ -21,23 +31,24 @@
                 </div>
             </swiper-slide>
         <!-- </div> -->
-
         </swiper>
-
+        
     </div>
 </template>
 <script>
   // import Swiper core and required modules
-  import { Navigation, Pagination, Scrollbar, A11y, FreeMode } from 'swiper/modules';
+  import { Navigation, Pagination, Scrollbar, A11y, FreeMode, Keyboard, Mousewheel } from 'swiper/modules';
 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
 
   // Import Swiper styles
   import 'swiper/css';
-  import 'swiper/css/navigation';
-  import 'swiper/css/pagination';
+//   import 'swiper/css/navigation';
+//   import 'swiper/css/pagination';
   import 'swiper/css/scrollbar';
+  import 'swiper/css/keyboard';
+  import 'swiper/css/mousewheel'
 export default {
     name: 'ArtworkCarouselComponent',
     components: {
@@ -63,7 +74,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Navigation, Pagination, Scrollbar, A11y, FreeMode],
+            modules: [Navigation, Pagination, Scrollbar, A11y, FreeMode, Keyboard, Mousewheel],
         };
     },
 }
@@ -138,6 +149,17 @@ export default {
         font-size: 10px;
         margin-bottom: 0;
         margin-top: 0.5rem;
+    }
+
+    .swiper-button-next {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    color: #888888 !important;
+    --swiper-navigation-size: 20px;
     }
 
 </style>
