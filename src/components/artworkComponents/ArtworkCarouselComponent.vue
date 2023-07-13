@@ -90,7 +90,7 @@ export default {
 
     .swiper {
         width: 100%;
-        height: 330px;
+        height: 50vh;
     }
 
     /* .swiper-slide img {
