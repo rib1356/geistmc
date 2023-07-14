@@ -51,7 +51,7 @@ export default {
         font-size: 18px;
         font-family: 'Montserrat-Bold', sans-serif;
         margin-bottom: 0;
-        margin-top: 1rem;
+        margin-top: 2rem;
     }
 
     .artist-text {

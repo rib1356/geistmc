@@ -16,6 +16,11 @@
   src: url('/src/assets/fonts/Montserrat/static/Montserrat-Thin.ttf');
 }
 
+@font-face {
+  font-family: Montserrat-medium;
+  src: url('/src/assets/fonts/Montserrat/static/Montserrat-Medium.ttf');
+}
+
 html, body {
   font-family: 'Montserrat', sans-serif;
 }

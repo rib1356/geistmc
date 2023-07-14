@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg fixed-top" :class="{ 'navbar-dark': darkNavbar }">
         <div class="container-fluid">
-            <p class="navbar-left">Est. 2011, Mayfair | Online Art Sales</p>
+            <p class="navbar-left">Est. 2011 London, Mayfair | Online Art Sales</p>
             <div class="geist-logo-div">
                 <img :src="(`${this.baseURL}images/geistLogoWhite.png`)" alt="geist-logo-white" class="geist-logo" id="giest-logo">
             </div>
@@ -69,6 +69,11 @@ export default {
         background-color: black;
     }
 
+    .navbar-dark {
+        border-bottom: 1.5px solid white;
+        box-shadow: 0 1px 2px 0px white;
+    }
+
     .container-fluid {
         padding: 0;
     }
@@ -77,6 +82,7 @@ export default {
         color: white;
         font-size: 13px;
         margin-left: 0rem;
+        font-family: 'Montserrat-Medium', sans-serif;
     }
 
     .navbar-collapse {
@@ -88,6 +94,7 @@ export default {
         font-size: 13px;
         padding-right: 0 !important;
         padding-left: 1rem !important;
+        font-family: 'Montserrat-Medium', sans-serif;
     }
 
     .nav-link:hover {
