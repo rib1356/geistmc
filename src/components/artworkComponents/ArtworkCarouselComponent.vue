@@ -88,6 +88,11 @@ export default {
         margin-top: 4rem;
     }
 
+    .carousel-name {
+        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+    }
+
     .swiper {
         width: 100%;
         height: 50vh;
@@ -148,7 +153,7 @@ export default {
     .carousel-subtext {
         font-size: 10px;
         margin-bottom: 0;
-        margin-top: 0.5rem;
+        margin-top: 0.1rem;
     }
 
     .swiper-button-next {

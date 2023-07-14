@@ -68,7 +68,7 @@
     }
     .carousel-name {
         text-transform: uppercase;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem !important;
         margin-top: 4rem;
     }
 

@@ -35,9 +35,8 @@ export default {
         margin-bottom: 5rem;
     }
     .artist-name {
-        text-transform: uppercase;
         margin-bottom: 1.5rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .artist-image {
@@ -51,7 +50,7 @@ export default {
         font-size: 18px;
         font-family: 'Montserrat-Bold', sans-serif;
         margin-bottom: 0;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .artist-text {
