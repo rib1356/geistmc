@@ -3,7 +3,9 @@
         <div class="container-fluid">
             <p class="navbar-left">Est. 2011 London, Mayfair | Online Art Sales</p>
             <div class="geist-logo-div">
-                <img :src="(`${this.baseURL}images/geistLogoWhite.png`)" alt="geist-logo-white" class="geist-logo" id="giest-logo">
+                <a href="/">
+                    <img :src="(`${this.baseURL}images/geistLogoWhite.png`)" alt="geist-logo-white" class="geist-logo" id="giest-logo">
+                </a>
             </div>
             <!-- Mobile button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Artists</a>
+                        <a class="nav-link" href="/artists">Artists</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>

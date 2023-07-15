@@ -1,45 +1,39 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 import HomeView from './views/HomeView.vue'
 import Navbar from './components/Navbar.vue'
 import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-	<Navbar v-bind:darkNavbar="darkNavbar"></Navbar>
-	<HomeView></HomeView>
+	<Navbar v-bind:darkNavbar="darkNavbar || currentRouteName != 'homeView'"></Navbar>
+  	<router-view @scroll="onScroll"></router-view>
 	<HomePageFooter v-bind:bottomFooterAnimation="bottomFooterAnimation" v-bind:bottomFooterMove="bottomFooterMove"></HomePageFooter>
-		<!-- <RouterView /> -->
-		<!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-		<div class="wrapper">
-			<HelloWorld msg="You did it!" />
-			
-			<nav>
-			<RouterLink to="/">Home</RouterLink>
-			<RouterLink to="/about">About</RouterLink>
-			</nav>
-		</div> -->
 </template>
 
 <script>
 export default {
     mounted () {
-        window.addEventListener('scroll', this.onScroll)
+        window.addEventListener('scroll', this.onScroll);;
     },
     beforeDestroy () {
-        window.removeEventListener('scroll', this.onScroll)
+        window.removeEventListener('scroll', this.onScroll);
     },
+	computed: {
+		currentRouteName() {
+			return this.$route.name;
+		},
+	},
     data () {
         return {
-			darkNavbar: false,
-			bottomFooter: false,
-			bottomFooterMove: false,
+          darkNavbar: false,
+          bottomFooter: false,
+          bottomFooterMove: false,
         }
     },
     methods: {
-        onScroll () {
-			//TODO: check if we are on the home page because we only need to change the navbar and footer on that scroll
+      onScroll () {
+            //TODO: See if we can only call this scroll event on the home page?
             // Get the current scroll position
             const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
             // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
@@ -50,7 +44,7 @@ export default {
             this.darkNavbar = currentScrollPosition > 1;
             this.bottomFooterAnimation = currentScrollPosition > 1 && currentScrollPosition < 50;
             this.bottomFooterMove = currentScrollPosition > 50;
-        }
+      },
     }
 }
 
