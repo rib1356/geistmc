@@ -8,12 +8,12 @@ const routes = [
 		redirect: { name: 'homeView' }
 	},
 	{
-		path: '/geistmc/',
+		path: '/',
 		name: 'homeView',
 		component: HomeView
 	},
 	{
-		path: '/geistmc/artists',
+		path: '/artists',
 		name: 'artistView',
 		component: ArtistView
 	}
