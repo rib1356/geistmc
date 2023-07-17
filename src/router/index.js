@@ -5,14 +5,19 @@ import ArtistView from '../views/ArtistView.vue'
 const routes = [
 	{
 		path: '/',
+		redirect: { name: 'homeView' }
+	},
+	{
+		path: '/geistmc/',
 		name: 'homeView',
 		component: HomeView
 	},
 	{
-		path: '/artists',
+		path: '/geistmc/artists',
 		name: 'artistView',
 		component: ArtistView
 	}
+	
 ]
 
 const router = createRouter({
