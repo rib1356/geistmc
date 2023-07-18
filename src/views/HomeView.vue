@@ -125,9 +125,6 @@ export default {
 
 
 <style scoped>
-	.page-padding {
-		padding: 9% 15% 5% 15%;
-	}
 
 	.artwork-series-div {
 		display: flex;
