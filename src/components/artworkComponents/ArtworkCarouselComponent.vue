@@ -4,10 +4,10 @@
         <swiper     
         class="swiper-container my-gallery"
         :modules="modules"
-        :slides-per-view="3.5"
+        :slides-per-view="this.artworkCarousel.slidesPerView"
         :space-between="20"
         :free-mode="true"
-        :slides-offset-after="75"
+        :slides-offset-after="this.artworkCarousel.slidesOffsetAfter"
         :keyboard="{
             enabled: true,
         }"
