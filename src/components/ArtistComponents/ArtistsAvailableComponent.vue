@@ -91,9 +91,9 @@ export default {
 
 <style scoped>
     .artists-available-div {
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
-    .artists-available-text {
+    .artist-available-text {
         margin-bottom: 1.5rem;
         margin-top: 2rem;
     }
