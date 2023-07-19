@@ -7,8 +7,8 @@
 
 <template>
     <div class="page-padding">
+		<FocusArtistsComponent></FocusArtistsComponent>
 		<FreeValuationComponent></FreeValuationComponent>
-    	<FocusArtistsComponent></FocusArtistsComponent>
 		<ArtistsAvailableComponent></ArtistsAvailableComponent>
 		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.davidHockney"/>
 		<ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.banksy"/>
@@ -54,16 +54,16 @@ export default {
 					slidesPerView: 2.5,
 					slidesOffsetAfter: 75,
 					carouselImages: [
-						"banksyCarousel1.jpg",
 						"banksyCarousel2.jpg",
 						"banksyCarousel3.jpg",
 						"banksyCarousel4.jpg",
+						"banksyCarousel1.jpg",
 					],
 					carouselText: [
-						{ title: "Flower Thrower Triptych 2019", subText: "Limited edition of 300"},
 						{ title: "Banksquiat 2019", subText: "Limited edition of 300"},
 						{ title: "Morons 2007", subText: "Signed screenprint in colors"},
 						{ title: "Flag 2006", subText: "Early screenprint in colors"},
+						{ title: "Flower Thrower Triptych 2019", subText: "Limited edition of 300"},
 					]
 				},
 				salvadorDali: {

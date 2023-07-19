@@ -32,7 +32,7 @@ export default {
   
 <style scoped>
     .artist-preview-div {
-        margin-bottom: 5rem;
+        margin-bottom: 3.5rem;
     }
     .artist-name {
         margin-bottom: 1.5rem;

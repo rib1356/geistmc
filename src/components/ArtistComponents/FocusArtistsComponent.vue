@@ -49,7 +49,6 @@ export default {
     }
     .focus-artists-text {
         margin-bottom: 1.5rem;
-        margin-top: 2rem;
     }
 
     .focus-image-flex {
@@ -62,8 +61,8 @@ export default {
 
     .focus-image {
         width: 16vw;
-        height: 35vh;
-        border: 1.5px solid black;
+        height: 32vh;
+        border: 1px solid #DFDFDF;
         margin-bottom: 1.7rem;
     }
 
