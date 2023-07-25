@@ -67,7 +67,7 @@ export default {
     }
 
     .artist-image-hover {
-        opacity: 20%;
+        opacity: 30%;
         object-fit: cover;
         height: 100%;
         width: 100%;
