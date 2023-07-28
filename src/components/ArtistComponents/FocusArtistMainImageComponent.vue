@@ -6,13 +6,18 @@
 
 <script>
 export default {
-  name: 'HomePageImage',
+  name: 'FocusArtistMainImageComponent',
+  data() {
+    return {
+        baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
+    }
+  }
 }
 </script>
   
 <style scoped>
   	.main-image {
-		background-image: url('/images/homePageChargingBull.jpg');
+		background-image: url('/images/artists/arturoDiModica/artistView/arturoMainImage.jpg');
 		background-size: cover;
 		height: 100vh;
 		width: 100vw;

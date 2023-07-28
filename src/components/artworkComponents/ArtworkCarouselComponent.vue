@@ -69,7 +69,6 @@ export default {
         }
     },
     mounted () {
-        console.log(this.artworkCarousel.carouselText);
         this.slidesPerView = (this.artworkCarousel.carouselImages.length / 2) + 0.25;
     },
     setup() {

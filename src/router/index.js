@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ArtistView from '../views/ArtistView.vue'
+import SelectedArtistView from '../views/SelectedArtistView.vue'
 
 const routes = [
 	{
@@ -16,8 +17,12 @@ const routes = [
 		path: '/artists',
 		name: 'artistView',
 		component: ArtistView
+	},
+	{
+		path: '/artists/selected-artist',
+		name: 'selectedArtistView',
+		component: SelectedArtistView,
 	}
-	
 ]
 
 const router = createRouter({

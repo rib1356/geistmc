@@ -6,7 +6,7 @@ import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-	<Navbar v-bind:darkNavbar="darkNavbar || currentRouteName != 'homeView'"></Navbar>
+	<Navbar v-bind:darkNavbar="darkNavbar || (currentRouteName != 'homeView' && currentRouteName != 'selectedArtistView') "></Navbar>
   	<router-view @scroll="onScroll"></router-view>
 	<HomePageFooter v-bind:bottomFooterAnimation="bottomFooterAnimation" v-bind:bottomFooterMove="bottomFooterMove"></HomePageFooter>
 </template>
@@ -21,6 +21,7 @@ export default {
     },
 	computed: {
 		currentRouteName() {
+      console.log(this.$route.name);
 			return this.$route.name;
 		},
 	},
@@ -34,6 +35,7 @@ export default {
     methods: {
       onScroll () {
             //TODO: See if we can only call this scroll event on the home page?
+            // THIS IS DEFINITELY GOING TO BE IMPORTANT FOR PERFORMANCE -- DO asap
             // Get the current scroll position
             const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
             // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero

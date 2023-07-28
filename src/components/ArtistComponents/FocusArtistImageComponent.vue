@@ -1,11 +1,13 @@
 <template>
-    <div :class="hover ? 'focus-image-hover' : 'focus-image'" @mouseover="hover = true" @mouseleave="hover = false" @click="doSomething()">
+    <div :class="hover ? 'focus-image-hover' : 'focus-image'" @mouseover="hover = true" @mouseleave="hover = false" @click="navigateToArtist()">
         <img :src="(`${this.baseURL}images/artists/focusArtists/${focusArtistImagePath}`)" :alt="(`${focusArtistName}-focus-image`)" :class="hover ? 'artist-image-hover' : 'artist-image'"/>
         <span v-if="hover" class="focus-image-text">{{ focusArtistName }}</span>
     </div>
 </template>
 
 <script>
+import router from '../../router';
+
 export default {
     name: 'FocusArtistImageComponent',
     data () {
@@ -23,8 +25,10 @@ export default {
         },
     },
     methods: {
-        doSomething() {
-            alert("Hey you clicked " + this.focusArtistName + " this will take you to their page");
+        navigateToArtist() {
+            // router.push({ name: this.focusArtistPageView, params: { artistName: this.focusArtistName }, query: { artistName: this.focusArtistName } , hash: '#focusArtist'});
+            router.push({ name: 'selectedArtistView', params: { artistName: this.focusArtistName}});
+            // router.push({ name: this.focusArtistPageView});
         }
     },
 }
