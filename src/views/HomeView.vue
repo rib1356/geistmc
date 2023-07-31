@@ -66,7 +66,7 @@ export default {
 			artworkCarouselObject: {
 				francisBacon: {
 					artistName: "Francis Bacon",
-					artistFolder: "francisBacon",
+					artistFolder: "images/artists/francisBacon",
 					slidesPerView: 3.5,
 					slidesOffsetAfter: 25,
 					carouselImages: [
@@ -86,7 +86,7 @@ export default {
 				},
 				andyWarhol: {
 					artistName: "Andy Warhol",
-					artistFolder: "andyWarhol",
+					artistFolder: "images/artists/andyWarhol",
 					slidesPerView: 3.5,
 					slidesOffsetAfter: 45,
 					carouselImages: [
@@ -106,7 +106,7 @@ export default {
 				},
 				arturoDiModica: {
 					artistName: "", //Needs to be empty on the home page
-					artistFolder: "arturoDiModica",
+					artistFolder: "images/artists/arturoDiModica",
 					slidesPerView: 3.5,
 					slidesOffsetAfter: 75,
 					carouselImages: [

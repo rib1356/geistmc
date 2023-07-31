@@ -30,7 +30,7 @@ export default {
 			artworkCarouselObject: {
 				davidHockney: {
 					artistName: "David Hockney",
-					artistFolder: "davidHockney",
+					artistFolder: "images/artists/davidHockney",
 					slidesPerView: 3.5,
 					slidesOffsetAfter: -30,
 					carouselImages: [
@@ -50,7 +50,7 @@ export default {
 				},
 				banksy: {
 					artistName: "Banksy",
-					artistFolder: "banksy",
+					artistFolder: "images/artists/banksy",
 					slidesPerView: 2.5,
 					slidesOffsetAfter: 75,
 					carouselImages: [
@@ -68,7 +68,7 @@ export default {
 				},
 				salvadorDali: {
 					artistName: "Salvador Dali", //Needs to be empty on the home page
-					artistFolder: "salvadorDali",
+					artistFolder: "images/artists/salvadorDali",
 					slidesPerView: 3.5,
 					slidesOffsetAfter: 0,
 					carouselImages: [

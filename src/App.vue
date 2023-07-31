@@ -1,12 +1,11 @@
 <script setup>
 import { RouterLink, RouterView, useRouter } from 'vue-router'
-import HomeView from './views/HomeView.vue'
 import Navbar from './components/Navbar.vue'
 import HomePageFooter from './components/HomePageFooter.vue'
 </script>
 
 <template>
-	<Navbar v-bind:darkNavbar="darkNavbar || (currentRouteName != 'homeView' && currentRouteName != 'selectedArtistView') "></Navbar>
+	<Navbar v-bind:darkNavbar="darkNavbar || displayNavbar"></Navbar>
   	<router-view @scroll="onScroll"></router-view>
 	<HomePageFooter v-bind:bottomFooterAnimation="bottomFooterAnimation" v-bind:bottomFooterMove="bottomFooterMove"></HomePageFooter>
 </template>
@@ -20,9 +19,11 @@ export default {
         window.removeEventListener('scroll', this.onScroll);
     },
 	computed: {
-		currentRouteName() {
-      console.log(this.$route.name);
-			return this.$route.name;
+		displayNavbar() {
+      if ((this.$route.name).includes('FocusArtistView') || this.$route.name == 'homeView') {
+        return false;
+      }
+			return true;
 		},
 	},
     data () {

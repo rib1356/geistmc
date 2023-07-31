@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+
+//Focus artists main page
 import ArtistView from '../views/ArtistView.vue'
-import SelectedArtistView from '../views/SelectedArtistView.vue'
+//Individual focus artist pages
+import ArturoFocusArtistView from '../views/focusArtists/ArturoFocusArtistView.vue'
 
 const routes = [
 	{
@@ -19,9 +22,9 @@ const routes = [
 		component: ArtistView
 	},
 	{
-		path: '/artists/selected-artist',
-		name: 'selectedArtistView',
-		component: SelectedArtistView,
+		path: '/artists/arturo-di-modica',
+		name: 'arturoFocusArtistView',
+		component: ArturoFocusArtistView,
 	}
 ]
 

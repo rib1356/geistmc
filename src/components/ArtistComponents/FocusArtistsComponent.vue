@@ -9,7 +9,8 @@
                 v-for="artist in focusArtists" 
                 :key="artist.artistName"
                 :focusArtistImagePath="artist.imagePath" 
-                :focusArtistName="artist.artistName">
+                :focusArtistName="artist.artistName"
+                :focusArtistPageView="artist.focusArtistPageView">
             </FocusArtistImageComponent>
         </div>
     </div> 
@@ -24,14 +25,14 @@ export default {
         return {
 			baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
             focusArtists: [
-                { imagePath: "1ArturoDiModica.jpg", artistName: "Arturo Di Modica" },
-                { imagePath: "2DavidHockney.jpg", artistName: "David Hockney" },
-                { imagePath: "3AndyWarhol.jpg", artistName: "Andy Warhol" },
-                { imagePath: "4Banksy.jpg", artistName: "Banksy" },
-                { imagePath: "5FrancisBacon.jpg", artistName: "Francis Bacon" },
-                { imagePath: "6SalvadorDali.jpg", artistName: "Salvador Dali" },
-                { imagePath: "7YayoiKusama.jpg", artistName: "Yayoi Kusama" },
-                { imagePath: "8RoyLichtenstein.jpg", artistName: "Roy Lichtenstein" }
+                { imagePath: "1ArturoDiModica.jpg", artistName: "Arturo Di Modica", focusArtistPageView: "arturoFocusArtistView" },
+                { imagePath: "2DavidHockney.jpg", artistName: "David Hockney", focusArtistPageView: "davidFocusArtistView" },
+                { imagePath: "3AndyWarhol.jpg", artistName: "Andy Warhol", focusArtistPageView: "andyFocusArtistView" },
+                { imagePath: "4Banksy.jpg", artistName: "Banksy", focusArtistPageView: "banksyFocusArtistView" },
+                { imagePath: "5FrancisBacon.jpg", artistName: "Francis Bacon", focusArtistPageView: "francisFocusArtistView" },
+                { imagePath: "6SalvadorDali.jpg", artistName: "Salvador Dali", focusArtistPageView: "salvadorFocusArtistView" },
+                { imagePath: "7YayoiKusama.jpg", artistName: "Yayoi Kusama", focusArtistPageView: "yayoiFocusArtistView" },
+                { imagePath: "8RoyLichtenstein.jpg", artistName: "Roy Lichtenstein", focusArtistPageView: "royFocusArtistView" }
             ]
         }
     },

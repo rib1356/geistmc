@@ -23,12 +23,13 @@ export default {
         focusArtistName: {
             type: String
         },
+        focusArtistPageView: {
+            type: String
+        }
     },
     methods: {
         navigateToArtist() {
-            // router.push({ name: this.focusArtistPageView, params: { artistName: this.focusArtistName }, query: { artistName: this.focusArtistName } , hash: '#focusArtist'});
-            router.push({ name: 'selectedArtistView', params: { artistName: this.focusArtistName}});
-            // router.push({ name: this.focusArtistPageView});
+            router.push({ name: this.focusArtistPageView});
         }
     },
 }
@@ -43,6 +44,7 @@ export default {
         position: relative;
         text-align: center;
         color: white;
+        cursor: pointer;
     }
 
     .focus-image-hover {
@@ -54,6 +56,7 @@ export default {
         position: relative;
         text-align: center;
         color: white;
+        cursor: pointer;
     }
     .artist-image {
         object-fit: cover;

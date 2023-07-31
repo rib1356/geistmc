@@ -22,17 +22,14 @@
         }"
         :scrollbar="{ draggable: true }"
         id="artworkSlider">
-        <!-- <div class="swiper-wrapper"> -->
             <swiper-slide v-for="(n, i) in this.artworkCarousel.carouselImages.length" :key="i" class="w-fit"> 
                 <div>
-                    <img class="slide-image" :src="(`${this.baseURL}images/artists/${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[i]}`)">
-                    <p class="carousel-title">{{ this.artworkCarousel.carouselText[i].title }}</p>
-                    <p class="carousel-subtext">{{ this.artworkCarousel.carouselText[i].subText }}</p>
+                    <img class="slide-image" :src="(`${this.baseURL}${this.artworkCarousel.artistFolder}/${this.artworkCarousel.carouselImages[i]}`)">
+                    <p v-if="this.artworkCarousel.carouselText.length != 0" class="carousel-title">{{ this.artworkCarousel.carouselText[i].title }}</p>
+                    <p v-if="this.artworkCarousel.carouselText.length != 0" class="carousel-subtext">{{ this.artworkCarousel.carouselText[i].subText }}</p>
                 </div>
             </swiper-slide>
-        <!-- </div> -->
-        </swiper>
-        
+        </swiper>        
     </div>
 </template>
 <script>
@@ -44,8 +41,6 @@
 
   // Import Swiper styles
   import 'swiper/css';
-//   import 'swiper/css/navigation';
-//   import 'swiper/css/pagination';
   import 'swiper/css/scrollbar';
   import 'swiper/css/keyboard';
   import 'swiper/css/mousewheel'
@@ -65,11 +60,10 @@ export default {
             baseURL: import.meta.env.PROD === true ? '' : '/', //Used as base URL for images as annoyingly local images need /
             slides: [],
             imagesLoaded: false,
-            slidesPerView: 3.5
+            slidesPerView: 3.5 //TODO: Need to see if I can get this to scale on screenwidth - I know I can with the element (breakpoints?)
         }
     },
     mounted () {
-        this.slidesPerView = (this.artworkCarousel.carouselImages.length / 2) + 0.25;
     },
     setup() {
         return {
@@ -96,19 +90,6 @@ export default {
         width: 100%;
         height: 50vh;
     }
-
-    /* .swiper-slide img {
-        object-fit: cover;
-        background-position: center;
-        width: 100%;
-        height: 350px;
-        aspect-ratio: 3/2;
-    } */
-
-
-    /* .swiper-container {
-        max-width: 100%;
-    } */
 
     .w-fit {
         width: fit-content !important;
