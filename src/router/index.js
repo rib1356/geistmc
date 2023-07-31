@@ -22,7 +22,7 @@ const routes = [
 		component: ArtistView
 	},
 	{
-		path: '/artists/arturo-di-modica',
+		path: '/arturo-di-modica',
 		name: 'arturoFocusArtistView',
 		component: ArturoFocusArtistView,
 	}
