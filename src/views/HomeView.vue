@@ -88,7 +88,7 @@ export default {
 					artistName: "Andy Warhol",
 					artistFolder: "images/artists/andyWarhol",
 					slidesPerView: 3.5,
-					slidesOffsetAfter: 45,
+					slidesOffsetAfter: 150,
 					carouselImages: [
 						"awCarousel1.jpg",
 						"awCarousel2.jpg",

@@ -20,7 +20,7 @@ export default {
     },
 	computed: {
 		displayNavbar() {
-      if ((this.$route.name).includes('FocusArtistView') || this.$route.name == 'homeView') {
+      if (this.$route.name == 'arturoFocusArtistView'|| this.$route.name == 'homeView') {
         return false;
       }
 			return true;

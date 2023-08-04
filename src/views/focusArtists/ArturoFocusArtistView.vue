@@ -1,6 +1,7 @@
 <script setup>
 	import FocusArtistMainImageComponent from '../../components/artistComponents/FocusArtistMainImageComponent.vue';
     import ArtworkCarouselComponent from '../../components/artworkComponents/ArtworkCarouselComponent.vue';
+    import PublicationsCarouselComponent from '../../components/PublicationsCarouselComponent.vue';
     import ArtistBioComonent from '../../components/artistComponents/ArtistBioComponent.vue';
 </script>
 
@@ -33,7 +34,7 @@
             <ArtistBioComonent></ArtistBioComonent>
         </div>
         <div class="artist-name-div">
-            <h2>Publications</h2>
+            <PublicationsCarouselComponent></PublicationsCarouselComponent>
         </div>
         <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.carousel1"/>
         <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.carousel2"/>
@@ -48,6 +49,7 @@ export default {
 		FocusArtistMainImageComponent,
         ArtworkCarouselComponent,
         ArtistBioComonent,
+        PublicationsCarouselComponent,
 	},
 	data() {
 		return {
@@ -92,7 +94,26 @@ export default {
 					],
 					carouselText: []
 				},
+                carousel4: {
+					artistName: "Publications",
+					artistFolder: "images/artists/arturoDiModica/artistView/carousel3",
+					slidesPerView: 3.5,
+					slidesOffsetAfter: 125,
+					carouselImages: [
+						"D20 - ADM9.jpg",
+						"D21 - ADM10.jpg",
+						"D20 - ADM9.jpg",
+						"D22 - ADM11.jpg",
+						"D21 - ADM10.jpg",
+						"D22 - ADM11.jpg",
+						"D23 - ADM12.jpg",
+						"D22 - ADM11.jpg",
+						"D23 - ADM12.jpg",
+					],
+					carouselText: []
+				},
 			}
+
 		}
 	},
 }

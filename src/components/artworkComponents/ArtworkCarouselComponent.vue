@@ -104,9 +104,10 @@ export default {
 
     .swiper-slide img {
         height: 40vh;
-        width: 100%;
         object-fit: fill;
         background-position: center;
+        max-width: 100%;
+        min-width: 100%;
     }
     .my-gallery figure {
     margin: 0px;
@@ -117,10 +118,7 @@ export default {
         font-size: 12px;
         background: #fff;
         width: min-content;
-        /* width: fit-content !important; */
-        /* width: -webkit-min-content!important;
-        width: -moz-min-content!important;
-        width: min-content!important; */
+        
     }
 
 
