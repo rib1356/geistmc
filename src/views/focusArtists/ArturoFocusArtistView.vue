@@ -33,7 +33,8 @@
             </div>
             <ArtistBioComonent></ArtistBioComonent>
         </div>
-        <div class="artist-name-div">
+        <div class="publication-div">
+            <h2>Publications</h2>
             <PublicationsCarouselComponent></PublicationsCarouselComponent>
         </div>
         <ArtworkCarouselComponent :artworkCarousel="artworkCarouselObject.carousel1"/>
@@ -126,6 +127,13 @@ export default {
         margin-top: 1rem;
         margin-bottom: 1.5rem;
         align-items: center;
+    }
+    .artist-name-div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        align-items: start;
     }
 
     .artist-name-subtext {
